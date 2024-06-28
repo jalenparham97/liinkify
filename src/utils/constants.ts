@@ -1,4 +1,4 @@
-export const COMPANY_NAME = "Saas Template";
+export const COMPANY_NAME = "Liinkify";
 
 /**
  * The default redirect path after logging in

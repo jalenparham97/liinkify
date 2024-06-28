@@ -10,7 +10,7 @@ export function EmptyState({ title, subtitle, icon, actionButton }: Props) {
     <div className="flex flex-col items-center">
       {icon}
       <h3 className="mt-4 text-lg font-semibold text-gray-900">{title}</h3>
-      <p className="mt-3 text-gray-600">{subtitle}</p>
+      <p className="mt-3 text-center text-gray-600">{subtitle}</p>
       <div className="mt-6">{actionButton}</div>
     </div>
   );

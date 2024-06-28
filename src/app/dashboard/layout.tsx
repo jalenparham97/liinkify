@@ -8,7 +8,7 @@ export default function DashboardPageLayout({
 }) {
   return (
     <DashboardLayout>
-      <div>{children}</div>
+      <div className="min-h-full bg-gray-50 pt-16">{children}</div>
     </DashboardLayout>
   );
 }

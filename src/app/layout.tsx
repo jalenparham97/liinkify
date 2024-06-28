@@ -26,8 +26,8 @@ export default async function RootLayout({
   const session = await auth();
 
   return (
-    <html lang="en">
-      <body className={`font-sans ${inter.variable}`}>
+    <html lang="en" className="h-full">
+      <body className={`font-sans ${inter.variable} h-full`}>
         <SessionProvider session={session}>
           <NextTopLoader showSpinner={false} color="#000" />
           <Toaster />

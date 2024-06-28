@@ -12,7 +12,8 @@ export interface InputProps
   errorMessage?: string;
   allowAutoComplete?: boolean;
   classNames?: {
-    label: string;
+    label?: string;
+    root?: string;
   };
   styles?: {
     label: React.CSSProperties;
@@ -38,7 +39,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     ref,
   ) => {
     return (
-      <div>
+      <div className={classNames?.root}>
         {label && (
           <label
             htmlFor={id}
@@ -91,7 +92,9 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             />
           )}
 
-          {error && <p className="mt-1 text-sm text-red-500">{errorMessage}</p>}
+          {error && errorMessage && (
+            <p className="mt-1 text-sm text-red-500">{errorMessage}</p>
+          )}
         </div>
       </div>
     );

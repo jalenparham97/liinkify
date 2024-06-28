@@ -2,6 +2,7 @@ import { createTRPCRouter, createCallerFactory } from "@/server/api/trpc";
 import { userRouter } from "./routers/user.router";
 import { storageRouter } from "./routers/storage.router";
 import { paymentRouter } from "./routers/payment.router";
+import { profilesRouter } from "./routers/profile.router";
 
 /**
  * This is the primary router for your server.
@@ -12,6 +13,7 @@ export const appRouter = createTRPCRouter({
   user: userRouter,
   storage: storageRouter,
   payment: paymentRouter,
+  profiles: profilesRouter,
 });
 
 // export type definition of API
@@ -22,6 +24,5 @@ export type AppRouter = typeof appRouter;
  * @example
  * const trpc = createCaller(createContext);
  * const res = await trpc.post.all();
- *       ^? Post[]
  */
 export const createCaller = createCallerFactory(appRouter);

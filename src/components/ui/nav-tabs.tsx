@@ -40,7 +40,7 @@ export function NavTab({ href, label, ...otherProps }: NavTabProps) {
         <Link
           href={href}
           className={cn(
-            "rounded-lg px-2.5 py-2 text-[15px] font-medium text-gray-500 no-underline hover:bg-gray-100 hover:text-gray-900",
+            "rounded-lg px-2.5 py-2 text-[15px] font-medium text-gray-500 no-underline hover:bg-secondary hover:text-gray-900",
             isRouteMatch && "text-gray-900 hover:text-gray-900",
           )}
         >

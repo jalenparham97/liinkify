@@ -8,7 +8,7 @@ interface Props {
 
 export function SettingsLayout({ children }: Props) {
   return (
-    <MaxWidthWrapper>
+    <MaxWidthWrapper className="py-10">
       <div>
         <PageTitle>Settings</PageTitle>
       </div>

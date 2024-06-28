@@ -2,10 +2,10 @@
 
 import {
   IconCreditCard,
-  IconHome,
   IconLogout,
   IconMenu2,
   IconSettings,
+  IconUser,
   IconUserCircle,
   IconX,
 } from "@tabler/icons-react";
@@ -46,7 +46,7 @@ export function DashboardLayout({ children }: Props) {
       <div className="h-full">
         <Disclosure
           as="nav"
-          className="sticky top-0 z-50 border-b border-gray-200 bg-white"
+          className="fixed left-0 top-0 z-50 w-full border-b border-gray-200 bg-white"
         >
           {({ open }) => (
             <>
@@ -60,9 +60,9 @@ export function DashboardLayout({ children }: Props) {
                     <div className="space-x-2">
                       <NavButton
                         href={`/dashboard`}
-                        leftIcon={<IconHome size={16} />}
+                        leftIcon={<IconUser size={16} />}
                       >
-                        Dashboard
+                        Profiles
                       </NavButton>
                       <NavButton
                         href={`/dashboard/settings`}
